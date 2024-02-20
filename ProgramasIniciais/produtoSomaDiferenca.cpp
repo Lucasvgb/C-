@@ -6,7 +6,7 @@ using std::cin;
 
 int main(){
 
-  int x , y, soma, produto, diferenca, quociente;
+  int x , y, soma, diferenca, quociente;
 
   cout << "Digite dois numeros inteiros: ";
   cin >> x >> y;
