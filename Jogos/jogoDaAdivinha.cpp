@@ -9,21 +9,28 @@ int main(){
   cout << "* Jogo da Adivinhacao!! *" << endl;
   cout << "****************************" << endl;
 
-  int numeroSecreto = 42;
+  const int NUMERO_SECRETO  = 42; //Por padrão as constantes ficam em CAPS LOCK.
+  bool nao_acertou = true;
   
-  int chute;
-  cout <<"Qual seu chute ? ";
-  cin >> chute;
-  cout <<"O valor do seu chute foi: " << chute << endl;
+  while(nao_acertou){
 
-  if(chute == numeroSecreto){
-    cout <<"Voce acertou !!" << endl;
-  }
-  else if(chute > numeroSecreto){
-    cout <<"O chute foi MAIOR do que o numero" << endl;
-  }
-  else{
-    cout <<"O chute foi MENOR do que o numero" << endl;
+    int chute;
+    cout <<"Qual seu chute ? ";
+    cin >> chute;
+    cout <<"O valor do seu chute foi: " << chute << endl;
+
+    bool acertou = chute == NUMERO_SECRETO;
+    bool maior = chute > NUMERO_SECRETO;
+  
+    if(acertou){
+      cout <<"Voce acertou !!" << endl;
+    }
+    else if(maior){
+      cout <<"O chute foi MAIOR do que o numero" << endl;
+    }
+    else{
+      cout <<"O chute foi MENOR do que o numero" << endl;
+    }
   }
   
   return 0;
