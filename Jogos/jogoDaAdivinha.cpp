@@ -11,10 +11,13 @@ int main(){
 
   const int NUMERO_SECRETO  = 42; //Por padrão as constantes ficam em CAPS LOCK.
   bool nao_acertou = true;
+  int tentativas = 0;
   
   while(nao_acertou){
 
+    tentativas += 1;
     int chute;
+    cout <<"Tentativa: " << tentativas << endl;
     cout <<"Qual seu chute ? ";
     cin >> chute;
     cout <<"O valor do seu chute foi: " << chute << endl;
@@ -24,6 +27,7 @@ int main(){
   
     if(acertou){
       cout <<"Voce acertou !!" << endl;
+      nao_acertou = false;
     }
     else if(maior){
       cout <<"O chute foi MAIOR do que o numero" << endl;
@@ -32,6 +36,9 @@ int main(){
       cout <<"O chute foi MENOR do que o numero" << endl;
     }
   }
-  
+
+  cout <<"Fim de jogo" << endl;
+  cout <<"Voce acertou o numero em: " << tentativas << " tentativas." << endl;
+
   return 0;
 }
