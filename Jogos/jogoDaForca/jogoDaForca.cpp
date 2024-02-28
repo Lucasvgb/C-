@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 int main(){
@@ -8,6 +8,8 @@ int main(){
   string palavra_secreta = "BANANA";
   cout << "A palavra eh: " << palavra_secreta << endl;
   
+  
+
 
 
   return 0;
